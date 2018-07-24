@@ -32,30 +32,30 @@
 
 ## hive启动
 ```markdown
-1.配置hive-site.xml
-  javax.jdo.option.ConnectionURL,
-  javax.jdo.option.ConnectionDriverName,
-  javax.jdo.option.ConnectionPassword,
-  javax.jdo.option.ConnectionUserName, 
-  替换${system:java.io.tmpdir}为/tmp, 
-  ${system:user.name}为${user.name}
-2.create database hive; 
-  grant all privileges on hive.* to 'hadoop'@'localhost' identified by 'hadoop';
-3.拷贝mysql-connector-java-5.1.*.jar到lib目录
-  初始化： schematool -dbType mysql -initSchema 
-4.$HADOOP_HOME/bin/hadoop fs -mkdir       /tmp
-  $HADOOP_HOME/bin/hadoop fs -mkdir -p    /user/hive/warehouse
-  $HADOOP_HOME/bin/hadoop fs -chmod g+w   /tmp
-  $HADOOP_HOME/bin/hadoop fs -chmod g+w   /user/hive/warehouse
-5.启动：hive
-6.参考https://cwiki.apache.org/confluence/display/Hive/GettingStarted#GettingStarted-InstallationandConfiguration进行DML，DDL操作
+1. 配置hive-site.xml
+   javax.jdo.option.ConnectionURL,
+   javax.jdo.option.ConnectionDriverName,
+   javax.jdo.option.ConnectionPassword,
+   javax.jdo.option.ConnectionUserName, 
+   替换${system:java.io.tmpdir}为/tmp, 
+   ${system:user.name}为${user.name}
+2. create database hive; 
+   grant all privileges on hive.* to 'hadoop'@'localhost' identified by 'hadoop';
+3. 拷贝mysql-connector-java-5.1.*.jar到lib目录
+   初始化： schematool -dbType mysql -initSchema 
+4. $HADOOP_HOME/bin/hadoop fs -mkdir       /tmp
+   $HADOOP_HOME/bin/hadoop fs -mkdir -p    /user/hive/warehouse
+   $HADOOP_HOME/bin/hadoop fs -chmod g+w   /tmp
+   $HADOOP_HOME/bin/hadoop fs -chmod g+w   /user/hive/warehouse
+5. 启动：hive
+6. 参考https://cwiki.apache.org/confluence/display/Hive/GettingStarted#GettingStarted-InstallationandConfiguration进行DML，DDL操作
 ```
 
 ## redis安装配置
 ```markdown
-1.下载文件，解压：tar -zxvf redis-4.0.1.tar.gz
-2.编译，cd redis-4.0.1 && make install
-3.检查，/usr/local/bin下是否有redis-server和redis-cli文件
-4.启动服务端，redis-server
-5.启动客户端，redis-cli
+1. 下载文件，解压：tar -zxvf redis-4.0.1.tar.gz
+2. 编译，cd redis-4.0.1 && make install
+3. 检查，/usr/local/bin下是否有redis-server和redis-cli文件
+4. 启动服务端，redis-server
+5. 启动客户端，redis-cli
 ```
