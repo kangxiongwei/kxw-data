@@ -50,3 +50,12 @@
 5.启动：hive
 6.参考https://cwiki.apache.org/confluence/display/Hive/GettingStarted#GettingStarted-InstallationandConfiguration进行DML，DDL操作
 ```
+
+## redis安装配置
+```markdown
+1.下载文件，解压：tar -zxvf redis-4.0.1.tar.gz
+2.编译，cd redis-4.0.1 && make install
+3.检查，/usr/local/bin下是否有redis-server和redis-cli文件
+4.启动服务端，redis-server
+5.启动客户端，redis-cli
+```
