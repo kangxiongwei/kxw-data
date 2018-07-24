@@ -29,3 +29,24 @@
 3. jps -l查看是否存在HMaster、HRegionServer进程
 4. 浏览器访问：http://localhost:16010/
 ```
+
+## hive启动
+```markdown
+1.配置hive-site.xml
+  javax.jdo.option.ConnectionURL,
+  javax.jdo.option.ConnectionDriverName,
+  javax.jdo.option.ConnectionPassword,
+  javax.jdo.option.ConnectionUserName, 
+  替换${system:java.io.tmpdir}为/tmp, 
+  ${system:user.name}为${user.name}
+2.create database hive; 
+  grant all privileges on hive.* to 'hadoop'@'localhost' identified by 'hadoop';
+3.拷贝mysql-connector-java-5.1.*.jar到lib目录
+  初始化： schematool -dbType mysql -initSchema 
+4.$HADOOP_HOME/bin/hadoop fs -mkdir       /tmp
+  $HADOOP_HOME/bin/hadoop fs -mkdir -p    /user/hive/warehouse
+  $HADOOP_HOME/bin/hadoop fs -chmod g+w   /tmp
+  $HADOOP_HOME/bin/hadoop fs -chmod g+w   /user/hive/warehouse
+5.启动：hive
+6.参考https://cwiki.apache.org/confluence/display/Hive/GettingStarted#GettingStarted-InstallationandConfiguration进行DML，DDL操作
+```
