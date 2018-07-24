@@ -23,3 +23,9 @@
 
 
 ## hbase启动
+```markdown
+1. start-hbase.sh
+2. hadoop fs -ls /hbase 查看HDFS中创建的目录
+3. jps -l查看是否存在HMaster、HRegionServer进程
+4. 浏览器访问：http://localhost:16010/
+```
