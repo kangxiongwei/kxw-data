@@ -1,2 +1,4 @@
 rootProject.name = 'kxw-data'
+include 'kxw-zk'
 include 'kxw-hadoop'
+include 'kxw-hbase'
