@@ -49,6 +49,17 @@
    $HADOOP_HOME/bin/hadoop fs -chmod g+w   /user/hive/warehouse
 5. 启动：hive
 6. 参考https://cwiki.apache.org/confluence/display/Hive/GettingStarted#GettingStarted-InstallationandConfiguration进行DML，DDL操作
+7. hive创建外部表关联Hbase
+   CREATE EXTERNAL TABLE h_user (
+     id int,
+     name string,
+     nick string,
+     pass string,
+     phone string,
+     sex string
+   ) STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+   WITH SERDEPROPERTIES
+   ("hbase.columns.mapping"=":key, base_info:name, base_info:nick, base_info:pass, ext_info:phone, ext_info:sex"); 
 ```
 
 ## redis安装配置
