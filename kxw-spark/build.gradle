@@ -1,0 +1,11 @@
+dependencies {
+    compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '2.3.0'
+    compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: '2.3.0'
+    compile group: 'org.apache.spark', name: 'spark-hive_2.11', version: '2.3.0'
+    compile group: 'org.apache.hive', name: 'hive-hbase-handler', version: '2.3.3'
+    compile group: 'org.apache.hive', name: 'hive-metastore', version: '2.3.3'
+    compile group: 'org.apache.hive', name: 'hive-jdbc', version: '2.3.3'
+    compile group: 'org.apache.hive', name: 'hive-common', version: '2.3.3'
+    compile group: 'org.apache.hive', name: 'hive-service', version: '2.3.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-common', version: '2.6.5'
+}

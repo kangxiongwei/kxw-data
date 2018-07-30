@@ -70,3 +70,22 @@
 4. 启动服务端，redis-server
 5. 启动客户端，redis-cli
 ```
+
+## spark安装配置
+```markdown
+1. 下载解压，然后设置环境变量SPARK_HOME=/Users/kangxiongwei/JavaSoft/spark-2.3.0
+2. 修改配置文件conf/spark-env.sh
+   export HADOOP_CONF_DIR=/Users/kangxiongwei/JavaSoft/hadoop-2.6.5/etc/hadoop
+   export YARN_CONF_DIR=/Users/kangxiongwei/JavaSoft/hadoop-2.6.5/etc/hadoop
+   export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+   export SPARK_MASTER_IP=127.0.0.1
+   export SPARK_MASTER_PORT=7077
+3. 启动spark集群
+   ./sbin/start-all.sh
+4. 启动spark-shell测试
+   ./bin/spark-shell --master spark://127.0.0.1:7077
+5. 本地查看集群
+   浏览器访问:localhost:8080
+6. 不能加载hadoop本地库告警？
+   MacOS环境下，重新编译hadoop源码，然后将其中lib/native/libhadoop.dylib拷贝到${JAVA_HOME}/jre/lib中
+```
