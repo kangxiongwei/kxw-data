@@ -1,0 +1,3 @@
+dependencies {
+    compileOnly("org.apache.storm:storm-core:1.2.2")
+}

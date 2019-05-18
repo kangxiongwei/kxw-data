@@ -1,10 +1,11 @@
 // 所有工程的通用配置
 allprojects {
-    group 'com.kxw'
+    group 'com.kxw.data'
     version '1.0-SNAPSHOT'
 
     apply plugin: 'java'
     apply plugin: 'maven'
+    apply plugin: 'idea'
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
