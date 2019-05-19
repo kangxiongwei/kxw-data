@@ -1,4 +1,4 @@
-package com.kxw.data.kafka;
+package com.kxw.data.kafka.canal;
 
 import com.alibaba.otter.canal.protocol.CanalEntry;
 import com.alibaba.otter.canal.protocol.CanalEntry.*;
